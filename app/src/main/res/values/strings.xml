@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Books</string>
+    <string name="initial_text">What you are looking for?...</string>
+    <string name="text">Find the things you need through the Google Books API...</string>
+    <string name="no_internet">There is no internet connection...</string>
+
+</resources>

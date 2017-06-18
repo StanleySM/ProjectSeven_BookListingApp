@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_window"
+    style="@style/main_body"
+    tools:context="com.example.android.projectseven_booklistingapp.MainActivity">
+
+    <SearchView
+        android:id="@+id/search"
+        style="@style/search_window"
+        android:queryHint="@string/initial_text"/>
+
+    <TextView
+        android:id="@+id/text"
+        style="@style/layout_window"
+        android:text="@string/text" />
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+</LinearLayout>
