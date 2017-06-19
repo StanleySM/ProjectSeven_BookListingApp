@@ -58,6 +58,8 @@ public class Books implements Parcelable {
                 for(int i=0; i<jsonArrayAuthors.length(); i++){
                     mBookAuthors.add(jsonArrayAuthors.get(i).toString());
                 }
+            } else {
+                mBookAuthors.add(0, "Author not found");
             }
         } catch(JSONException e){
             e.printStackTrace();
