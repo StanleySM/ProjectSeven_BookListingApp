@@ -53,13 +53,15 @@ public class Books implements Parcelable {
             this.mBookTitle = volumeInfo.getString("title");
             this.mBookAuthors = new ArrayList<>();
 
-            JSONArray jsonArrayAuthors = volumeInfo.getJSONArray("authors");
-            if (jsonArrayAuthors != null){
+            if (volumeInfo.has("authors")) {
+                // parse the authors field
+                JSONArray jsonArrayAuthors = volumeInfo.getJSONArray("authors");
                 for(int i=0; i<jsonArrayAuthors.length(); i++){
-                    mBookAuthors.add(jsonArrayAuthors.get(i).toString());
+                mBookAuthors.add(jsonArrayAuthors.get(i).toString());
                 }
             } else {
-                mBookAuthors.add(0, "Author not found");
+                // Placeholder for no author
+                mBookAuthors.add(0, "Author NOT found");
             }
         } catch(JSONException e){
             e.printStackTrace();
